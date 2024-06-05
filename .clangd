@@ -1,0 +1,15 @@
+Diagnostics:
+  UnusedIncludes: None  # None:忽略 Strict：严格
+  Suppress: [-Wignored-attributes]  # clang 忽略诊断信息
+
+Index:
+  Background: Build
+
+CompileFlags:
+  Remove: [-Wattributes]
+  Compiler: arm-none-eabi-gcc
+---
+If:
+  PathMatch: .*\.(cpp|c|h)$
+CompileFlags:
+  Add: [-std=gnu11]

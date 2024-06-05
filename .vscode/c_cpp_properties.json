@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "arm-none",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "D:\\ST\\STM32CubeCLT_1.15.1\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-arm",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

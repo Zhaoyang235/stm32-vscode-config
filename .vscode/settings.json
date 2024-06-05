@@ -1,0 +1,34 @@
+{
+    "cmake.configureOnOpen": true,
+    "clangd.arguments": [
+        // 在后台自动分析文件（基于complie_commands)
+        "--background-index",
+        // 标记compelie_commands.json文件的目录位置
+        "--compile-commands-dir=build",
+        // 同时开启的任务数量
+        "-j=12",
+        // clang-tidy功能
+        "--clang-tidy",
+        // 全局补全（会自动补充头文件）
+        "--all-scopes-completion",
+        // 详细补全
+        "--completion-style=detailed",
+        // 使能配置文件.clangd
+        // 目前vscode插件clangd使用项目配置文件.clangd不生效，原因本机目录%USERPROFILE%\AppData\Local
+        // 存在clangd config.yaml 文件,也就是说这几个文件不是覆盖关系，用户配置文件具有最高优先级
+        "--enable-config",
+        // 补充头文件
+        "--header-insertion=never",
+        // pch优化的位置
+        "--pch-storage=disk",
+        // 配置 gcc 编译器路径，以便找到头文件路径
+        "--query-driver=D:\\ST\\STM32CubeCLT_1.15.1\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc*"
+        
+      ],
+      "clangd.fallbackFlags": [
+      "--target=arm-none-eabi-gcc",
+      ],
+      "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+      "C_Cpp.intelliSenseEngine": "disabled",
+      "cortex-debug.variableUseNaturalFormat": false,
+}
