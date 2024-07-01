@@ -6,7 +6,7 @@ Index:
   Background: Build
 
 CompileFlags:
-  Remove: [-Wattributes]
+  Remove: [-Wattributes, -fcyclomatic-complexity, -fexec-charset=GBK]
   Compiler: arm-none-eabi-gcc
 ---
 If:

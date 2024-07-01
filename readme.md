@@ -1,4 +1,4 @@
-vscode 中开发 stm32 HAL 项目配置
+vscode 中开发 stm32 HAL 项目，使用 cmake 进行项目构建
 
 ## 依赖工具
 - [clangd](https://github.com/clangd/clangd/releases/tag/18.1.3)
