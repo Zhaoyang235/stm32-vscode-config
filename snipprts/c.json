@@ -1,0 +1,31 @@
+{
+	"c header file define": {
+		"prefix": "#ifndef",
+		"body": [
+			"#ifndef __$1_H__",
+            "#define __$1_H__",
+            "",
+            "/* C binding of definitions if building with C++ compiler */",
+            "#ifdef __cplusplus",
+            "extern \"C\"",
+            "{",
+            "#endif",
+            "",
+            "",
+            "",
+            "#ifdef __cplusplus",
+            "}",
+            "#endif",
+            "",
+            "#endif /* __$1_H__ */",
+            ""
+		]
+	},
+    "pricate function": {
+        "prefix":"//pf",
+        "body":[
+            "/* Private function prototypes -----------------------------------------------*/"
+        ]
+    }
+
+}

@@ -1,0 +1,37 @@
+{
+    "ClangFormat Config": {
+        "prefix": "clangFormatConfig",
+        "body": [
+            "BasedOnStyle: Microsoft",
+            "AccessModifierOffset: -4",
+            "AlignConsecutiveMacros: true",
+            "AlignTrailingComments: true",
+            "AllowShortFunctionsOnASingleLine: Inline",
+            "AllowShortIfStatementsOnASingleLine: true",
+            "BreakBeforeBraces: Allman",
+            "ColumnLimit: 400"
+        ],
+        "description": "ClangFormat configuration for VS Code"
+    },
+	"Clangd Config Extended": {
+		"prefix": "clangdConfigExtended",
+		"body": [
+			"Diagnostics:",
+			"  UnusedIncludes: None  # None:忽略 Strict：严格",
+			"  Suppress: [-Wignored-attributes]  # clang 忽略诊断信息",
+			"",
+			"Index:",
+			"  Background: Build",
+			"",
+			"CompileFlags:",
+			"  Remove: [-Wattributes]",
+			"  Compiler: arm-none-eabi-gcc",
+			"---",
+			"If:",
+			"  PathMatch: .*\\.(cpp|c|h)$",
+			"CompileFlags:",
+			"  Add: [-std=gnu11]"
+		],
+		"description": "Extended Clangd configuration for VS Code"
+	}
+}
